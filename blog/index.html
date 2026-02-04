@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CtyFly Blog</title>
+  <link rel="icon" href="https://dtyashpal.com/archia-content/uploads/sites/365/2023/04/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="https://dtyashpal.com/archia-content/uploads/sites/365/2023/04/favicon.png">
+  <link rel="stylesheet" href="https://archiastudio.com/warehouse/css/warehouse.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KX4EKGY3VC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KX4EKGY3VC');
+  </script>
+
+  <style>
+
+    .nav>#active>a {
+    color: #650084;
+    text-decoration: underline;
+}
+
+.nav>li>a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav>li>a:hover {
+    color: #0f8400;
+    text-decoration: underline;
+}
+
+
+    body {
+      font-family: Causten-Bold, sans-serif;
+      background: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      --dot-bg: rgb(255, 255, 255);
+            --dot-color: rgba(143, 19, 225, 0.493);
+            --dot-size: 2px;
+            --dot-space: 22px;
+            background:
+                linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+                linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+                var(--dot-color);
+            background-position-y: 100%;
+            animation: shimmer-y 100s infinite linear;
+            /* Added padding for responsiveness */
+            transition: all 0.5s ease-in;
+    }
+
+    @keyframes shimmer-y {
+            to {
+                background-position-y: 0%;
+            }
+        }
+
+
+    h1 {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    #blog-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      width: 90%;
+      margin: 3rem auto;
+    }
+
+    .post-card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      background: #fff;
+      transition: transform 0.2s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-1rem);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 1.2rem;
+    }
+
+    .post-content h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .post-content p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    a.post-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Skeleton loader */
+    .skeleton-card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .skeleton-img,
+    .skeleton-text {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .skeleton-img {
+      width: 100%;
+      height: 220px;
+    }
+
+    .skeleton-content {
+      padding: 1.2rem;
+    }
+
+    .skeleton-text {
+      height: 16px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    .skeleton-text.short { width: 60%; }
+    .skeleton-text.long { width: 90%; }
+
+    #load-trigger {
+      height: 100px;
+    }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 0.4s ease, visibility 0.4s;
+    }
+
+    #preloader.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #preloader img {
+      width: 100px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    #preloader p {
+      font-family: Causten-Bold, sans-serif;
+      font-size: 1.1rem;
+      color: #111;
+      margin-top: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .nav{
+      background: linear-gradient(-45deg, #8456c5 40%, #502a85 50%, #8456c5 60%);
+            background-size: 200%;
+            background-position-x: 100%;
+            animation: shimmer 2s infinite linear;
+    }
+    .nav>li>a{
+      color: white;
+    }
+/* Filter bar */
+#filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+#filter-bar select {
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #fff;
+  min-width: 140px;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  #filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #filter-bar select {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+
+  </style>
+  </style>
+</head>
+
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-img"></div>
+  <div class="home">
+    <nav>
+            <ul class="nav">
+                <li id="active"><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="mailto:customer@ctyfly.com">Email</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=919738981411&text=Hi%20DTYashpal%20%2C%20I%20am%20contacting%20you%20based%20on%20the%20information%20provided%20on%20your%20website." target="_blank">BookMeeting!</a></li>
+        </nav>
+  </div>
+
+  <h1>CtyFly Blog</h1>
+  <br>
+  <div id="filter-bar">
+  <select id="year-filter">
+    <option value="all">All Years</option>
+  </select>
+
+  <select id="month-filter" disabled>
+    <option value="all">All Months</option>
+  </select>
+</div>
+  <div id="blog-list"></div>
+  <div id="load-trigger"></div>
+
+  <script>
+    const CACHE_KEY = "archia_blog_cache_v1";
+const CACHE_TTL = 1000 * 60 * 10; // 10 minutes
+const blogList = document.getElementById("blog-list");
+const loadTrigger = document.getElementById("load-trigger");
+const yearFilter = document.getElementById("year-filter");
+const monthFilter = document.getElementById("month-filter");
+
+let allFiles = [];
+let filteredFiles = [];
+let currentIndex = 0;
+const batchSize = 6;
+let loading = false;
+
+const REPO_API = "https://api.github.com/repos/archiastudio/ARC-BAN-01/contents/blog";
+const RAW_BASE = "https://raw.githubusercontent.com/archiastudio/ARC-BAN-01/main/blog";
+
+/* -------------------------------
+   Skeleton Loader
+--------------------------------*/
+function addSkeletons(count = 6) {
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement("div");
+    el.className = "skeleton-card";
+    el.innerHTML = `
+      <div class="skeleton-img"></div>
+      <div class="skeleton-content">
+        <div class="skeleton-text short"></div>
+        <div class="skeleton-text long"></div>
+      </div>`;
+    blogList.appendChild(el);
+  }
+}
+
+function clearList() {
+  blogList.innerHTML = "";
+}
+
+/* -------------------------------
+   Recursive Fetch
+--------------------------------*/
+async function fetchFiles() {
+  const cached = getCache();
+  if (cached) {
+    allFiles = cached;
+    return;
+  }
+
+  allFiles = [];
+
+  async function walk(path = "") {
+    const res = await fetch(`${REPO_API}/${path}`);
+    const data = await res.json();
+
+    for (const item of data) {
+      if (item.type === "dir") {
+        await walk(item.path.replace("blog/", ""));
+      }
+      if (item.type === "file" && item.name.endsWith(".html") && item.name !== "index.html") {
+        const parts = item.path.split("/");
+        allFiles.push({
+          name: item.name,
+          path: item.path.replace("blog/", ""),
+          year: parts[1],
+          month: parts[2]
+        });
+      }
+    }
+  }
+
+  await walk();
+  setCache(allFiles);
+}
+
+
+/* -------------------------------
+   Build Filters
+--------------------------------*/
+function buildFilters() {
+  const years = [...new Set(allFiles.map(f => f.year))].sort().reverse();
+
+  years.forEach(y => {
+    const opt = document.createElement("option");
+    opt.value = y;
+    opt.textContent = y;
+    yearFilter.appendChild(opt);
+  });
+}
+
+/* -------------------------------
+   Apply Filters
+--------------------------------*/
+function applyFilters() {
+  const year = yearFilter.value;
+  const month = monthFilter.value;
+
+  filteredFiles = allFiles.filter(f => {
+    if (year !== "all" && f.year !== year) return false;
+    if (month !== "all" && f.month !== month) return false;
+    return true;
+  });
+
+  currentIndex = 0;
+  clearList();
+  loadNextBatch();
+}
+
+/* -------------------------------
+   Month Population
+--------------------------------*/
+yearFilter.addEventListener("change", () => {
+  monthFilter.innerHTML = `<option value="all">All Months</option>`;
+
+  if (yearFilter.value === "all") {
+    monthFilter.disabled = true;
+    applyFilters();
+    return;
+  }
+
+  monthFilter.disabled = false;
+
+  const months = [
+    ...new Set(
+      allFiles
+        .filter(f => f.year === yearFilter.value)
+        .map(f => f.month)
+    )
+  ].sort().reverse();
+
+  months.forEach(m => {
+    const opt = document.createElement("option");
+    opt.value = m;
+    opt.textContent = m;
+    monthFilter.appendChild(opt);
+  });
+
+  applyFilters();
+});
+
+monthFilter.addEventListener("change", applyFilters);
+
+/* -------------------------------
+   Load Batch
+--------------------------------*/
+async function loadNextBatch() {
+  if (loading || currentIndex >= filteredFiles.length) return;
+  loading = true;
+  addSkeletons();
+
+  const slice = filteredFiles.slice(currentIndex, currentIndex + batchSize);
+
+  for (const file of slice) {
+    try {
+      const res = await fetch(`${RAW_BASE}/${file.path}`);
+      const html = await res.text();
+
+      const title = html.match(/<title[^>]*>(.*?)<\/title>/i)?.[1] || file.name;
+      const desc =
+        html.match(/property=["']og:description["'][^>]*content=["'](.*?)["']/i)?.[1] ||
+        html.match(/name=["']description["'][^>]*content=["'](.*?)["']/i)?.[1] ||
+        "No description available.";
+
+      const image =
+        html.match(/url\((https:\/\/[^)]+)\)/i)?.[1] ||
+        "https://archiastudio.com/warehouse/data/images/default.jpg";
+
+      const card = document.createElement("a");
+      card.className = "post-link";
+      card.href = `/blog/${file.path}`;
+      card.innerHTML = `
+        <div class="post-card">
+          <img src="${image}">
+          <div class="post-content">
+            <h2>${title}</h2>
+            <p>${desc}</p>
+          </div>
+        </div>
+      `;
+      blogList.appendChild(card);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  document.querySelectorAll(".skeleton-card").forEach(e => e.remove());
+  currentIndex += batchSize;
+  loading = false;
+}
+
+/* -------------------------------
+   Infinite Scroll
+--------------------------------*/
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) loadNextBatch();
+}, { threshold: 1 });
+
+/* -------------------------------
+   Init
+--------------------------------*/
+(async function init() {
+  await fetchFiles();
+  buildFilters();
+  filteredFiles = [...allFiles];
+  loadNextBatch();
+  observer.observe(loadTrigger);
+})();
+
+
+function getCache() {
+  try {
+    const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+    if (!cached) return null;
+    if (Date.now() - cached.time > CACHE_TTL) {
+      localStorage.removeItem(CACHE_KEY);
+      return null;
+    }
+    return cached.data;
+  } catch {
+    return null;
+  }
+}
+
+function setCache(data) {
+  try {
+    localStorage.setItem(
+      CACHE_KEY,
+      JSON.stringify({ time: Date.now(), data })
+    );
+  } catch {}
+}
+    </script>
+</body>
+</html>
