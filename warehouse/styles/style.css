@@ -1,11 +1,15 @@
 @font-face {
-  font-family: 'Bold'; /* Choose a name for your font family */
-  src: url('../fonts/1.otf') format('opentype'); /* Specify the path and format */
+    font-family: 'Bold';
+    /* Choose a name for your font family */
+    src: url('../fonts/1.otf') format('opentype');
+    /* Specify the path and format */
 }
 
 @font-face {
-  font-family: 'Medium'; /* Choose a name for your font family */
-  src: url('../fonts/2.otf') format('opentype'); /* Specify the path and format */
+    font-family: 'Medium';
+    /* Choose a name for your font family */
+    src: url('../fonts/2.otf') format('opentype');
+    /* Specify the path and format */
 }
 
 
@@ -73,11 +77,14 @@ body {
 .search-box {
     font-family: Bold;
     background: #eee;
-    border-radius: 1.875rem; /* 30px */
+    border-radius: 1.875rem;
+    /* 30px */
     display: flex;
     justify-content: space-between;
+    text-align: left;
     padding: 0.7rem;
-    max-width: 43.75rem; /* 700px */
+    max-width: 43.75rem;
+    /* 700px */
     margin: auto;
     align-items: center;
     gap: 1rem;
@@ -93,15 +100,18 @@ body {
     background: transparent;
     font-weight: 600;
     outline: none;
-    width: 7.5rem; /* 120px */
+    width: 7.5rem;
+    /* 120px */
 }
 
 .search-btn {
     background: #79B5F2;
     border: none;
     border-radius: 50%;
-    width: 2.625rem;  /* 42px */
-    height: 2.625rem; /* 42px */
+    width: 2.625rem;
+    /* 42px */
+    height: 2.625rem;
+    /* 42px */
     cursor: pointer;
 }
 
@@ -136,6 +146,7 @@ body {
     transform: scale(1.08);
     transition: 0.3s ease-in-out;
 }
+
 .offer {
     position: absolute;
     background: #ff5252;
@@ -185,7 +196,7 @@ body {
     background: #fff;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* FOOTER */
@@ -209,20 +220,49 @@ footer {
         display: none;
         padding: 1rem;
     }
-    
-    .search-btn {
-        background: #79b5f200;
+
+    .search-box {
+        font-family: Bold;
+        background: #eee;
+        border-radius: 1.875rem;
+        /* 30px */
+        display: flex;
+        justify-content: space-between;
+        padding: 0.7rem;
+        max-width: 43.7rem;
+        /* 700px */
+        margin: auto;
+        align-items: center;
+        text-align: left;
+        gap: 0.5rem;
+    }
+
+    .field span {
+        font-size: 0.7rem;
+        color: #555;
+    }
+
+    .field input {
         border: none;
-        border-radius: 0%;
+        background: transparent;
+        font-weight: 600;
+        outline: none;
+        width: 6rem;
+        /* 120px */
+    }
+
+    .search-btn {
+        border: none;
         width: 2.625rem;
         height: 2.625rem;
         cursor: pointer;
     }
+
     .menu-btn {
         display: block;
     }
 
-    
+
 
     .search-box {
         border-radius: 20px;
@@ -241,7 +281,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
     z-index: 9999;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -253,7 +293,7 @@ footer {
 
 .whatsapp-float:hover {
     transform: scale(1.08);
-    box-shadow: 0 0.75rem 1.25rem rgba(0,0,0,0.3);
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3);
 }
 
 
@@ -262,10 +302,10 @@ footer {
     text-align: center;
     padding: 10rem 5rem;
     background: linear-gradient(135deg, #79b5f2b1, #4da3ff4e),
-    url("https://i.pinimg.com/1200x/1d/83/75/1d83759b91daf340fceea9b003ea27ba.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+        url("https://i.pinimg.com/1200x/1d/83/75/1d83759b91daf340fceea9b003ea27ba.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
 }
 
@@ -303,10 +343,10 @@ footer {
 .upcoming-features {
     font-family: Bold;
     background: linear-gradient(135deg, #ffffffe3, #ffffffab),
-    url("https://i.pinimg.com/1200x/59/09/8f/59098fabd1513e48f7449ae89f057a7a.jpg");
+        url("https://i.pinimg.com/1200x/59/09/8f/59098fabd1513e48f7449ae89f057a7a.jpg");
     background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 10rem 5rem;
     text-align: center;
 }
@@ -322,7 +362,7 @@ footer {
     background: #fff;
     padding: 1rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .waitlist {
