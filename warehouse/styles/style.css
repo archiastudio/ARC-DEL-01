@@ -1,0 +1,346 @@
+@font-face {
+  font-family: 'Bold'; /* Choose a name for your font family */
+  src: url('../fonts/1.otf') format('opentype'); /* Specify the path and format */
+}
+
+@font-face {
+  font-family: 'Medium'; /* Choose a name for your font family */
+  src: url('../fonts/2.otf') format('opentype'); /* Specify the path and format */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+/* NAVBAR */
+.navbar {
+    font-family: Bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero h1 {
+    font-family: Bold;
+    font-size: 3.5rem;
+}
+
+.tagline {
+    font-family: Bold;
+    margin: 0.5rem 0 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+/* SEARCH */
+.search-box {
+    font-family: Bold;
+    background: #eee;
+    border-radius: 1.875rem; /* 30px */
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem;
+    max-width: 43.75rem; /* 700px */
+    margin: auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.field span {
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.field input {
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    outline: none;
+    width: 7.5rem; /* 120px */
+}
+
+.search-btn {
+    background: #79B5F2;
+    border: none;
+    border-radius: 50%;
+    width: 2.625rem;  /* 42px */
+    height: 2.625rem; /* 42px */
+    cursor: pointer;
+}
+
+
+/* ROUTES */
+.routes {
+    padding: 5rem 5rem;
+}
+
+.routes h2 {
+    font-family: Bold;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #79B5F2;
+    display: inline-block;
+}
+
+.route-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.route-card {
+    font-family: Bold;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.route-card:hover {
+    transform: scale(1.08);
+    transition: 0.3s ease-in-out;
+}
+.offer {
+    position: absolute;
+    background: #ff5252;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 0 0 10px 0;
+}
+
+.route-card {
+    position: relative;
+}
+
+
+.route-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: 700;
+    padding: 0.5rem;
+    color: #79B5F2;
+}
+
+.route-card p {
+    padding: 0 0.5rem 0.8rem;
+}
+
+/* WHY */
+.why {
+    font-family: Bold;
+    background: #f8f9ff;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.feature {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+footer {
+    font-family: Bold;
+    text-align: center;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .search-box {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+}
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0.75rem 1.25rem rgba(0,0,0,0.3);
+}
+
+
+.coming-soon {
+    font-family: Bold;
+    text-align: center;
+    padding: 10rem 5rem;
+    background: linear-gradient(135deg, #79B5F2, #4da3ff);
+    color: #fff;
+}
+
+.coming-soon h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.coming-soon p {
+    font-size: 1rem;
+    max-width: 40rem;
+    margin: auto;
+    opacity: 0.95;
+}
+
+.vision {
+    font-family: Bold;
+    padding: 10rem 5rem;
+    text-align: center;
+    background: #fff;
+}
+
+.vision h2 {
+    margin-bottom: 1rem;
+}
+
+.vision p {
+    max-width: 45rem;
+    margin: auto;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.upcoming-features {
+    font-family: Bold;
+    background: #f8f9ff;
+    padding: 10rem 5rem;
+    text-align: center;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.waitlist {
+    font-family: Bold;
+    padding: 10rem 5rem;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff, #d3e9ff);
+}
+
+.waitlist p {
+    margin: 0.5rem auto 1.2rem;
+    max-width: 35rem;
+    color: #555;
+}
+
+.waitlist-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.waitlist-form input {
+    padding: 0.7rem 1rem;
+    width: 16rem;
+    border-radius: 2rem;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.waitlist-form button {
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    background: #79B5F2;
+    color: #fff;
+    cursor: pointer;
+}

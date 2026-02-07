@@ -1,455 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/x-icon" href="/images/res/iconi.png">
-	<meta name="theme-color" content="#8B5CF6" />
-	<meta name="keywords"
-		content="cheapest bus in Delhi, best affordable bus to Dehradun, budget Delhi to Dehradun buses, low fare travel Delhi, economical bus booking Dehradun, Delhi budget interstate buses, cheapest Volvo bus Delhi to Dehradun, pocket friendly bus tickets Delhi, affordable sleeper bus Dehradun route, discount bus fares Delhi, low price AC bus Delhi to Dehradun, best value bus service Delhi">
-	<meta name="robots" content="max-image-preview:large">
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<meta name="twitter:image" content="https://CtyFly.com/images/res/7.png" />
-	<meta property="og:description"
-		content="CtyFly is a fast-growing intercity bus mobility startup, connecting travelers across multiple cities with a fleet of modern buses, ensuring every journey is safe, comfortable, and efficient." />
-	<meta property="og:site_name" content="CtyFly – A Startup Built to Transform Your Journey." />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-		rel="stylesheet">
-
-	<link rel="stylesheet" href="css/7XwYUUQQj7AC.css">
-	<link rel="stylesheet" href="css/tCTq9qLqPFih.css">
-
-	<link rel="stylesheet" href="css/yWz0KA9h0dNW.css">
-	<link rel="stylesheet" href="css/DIk3CiaNYGi5.css">
-	<link rel="stylesheet" href="css/ydTat9FrG1vp.css">
-	<link rel="stylesheet" href="css/J2sgcVHdJUVd.css">
-	<link rel="stylesheet" href="css/p2vzpQ0Upx1f.css">
-
-
-	<title>CtyFly – A Startup Built to Transform Your Journey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTYFLY</title>
+<link rel="stylesheet" href="warehouse/styles/style.css">
 </head>
-
 <body>
 
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close">
-				<span class="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">CTYFLY</div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Routes</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Support</a></li>
+    </ul>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
 
-	<nav class="site-nav mt-3">
-		<div class="container">
-			<div class="site-navigation">
-				<a href="index.html" class="logo m-0 float-start">CtyFly</a>
+<!-- HERO -->
+<section class="hero">
+    <h1>CTYFLY</h1>
+    <p class="tagline">Connecting Cities. Moving Lives.</p>
 
+    <div class="search-box">
+        <div class="field">
+            <span>FROM</span>
+            <input id="fromCity" placeholder="Delhi">
+        </div>
 
+        <div class="field">
+            <span>TO</span>
+            <input id="toCity" placeholder="Manali">
+        </div>
 
+        <div class="field">
+            <span>DEPARTURE</span>
+            <input type="date" id="travelDate">
+        </div>
 
-				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="#About">About us</a></li>
-					<li class="has-children">
-						<a href="#">Dropdown</a>
-						<ul class="dropdown">
-							<li><a href="#">Menu One</a></li>
-							<li class="has-children">
-								<a href="#">Menu Two</a>
-								<ul class="dropdown">
-									<li><a href="#">Sub Menu One</a></li>
-									<li><a href="#">Sub Menu Two</a></li>
-									<li><a href="#">Sub Menu Three</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Menu Three</a></li>
-						</ul>
-					</li>
-					<li><a href="#Services">Services</a></li>
-					<li><a href="#">Blog</a></li>
+        <button class="search-btn" onclick="searchBuses()">🔍</button>
+    </div>
+</section>
 
-				</ul>
+<!-- ROUTES -->
+<section class="routes">
+    <h2>Popular Routes</h2>
 
-				<ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu float-end">
-					<li class="cta-button"><a href="mailto:partners@CtyFly.com">Contact Us</a></li>
-				</ul>
+    <div class="route-grid">
+        <div class="route-card">
+            <div class="offer">20% OFF</div>
+            <img src="warehouse/images/manali.jpg">
+            <div class="price" data-price="799">₹0</div>
+            <p>Delhi → Dehradun</p>
+        </div>
 
-				<a href="#"
-					class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
-					data-toggle="collapse" data-target="#main-navbar">
-					<span></span>
-				</a>
+        <div class="route-card">
+            <img src="warehouse/images/chd.jpg">
+            <div class="price" data-price="599">₹0</div>
+            <p>Delhi → Chandigarh</p>
+        </div>
 
-			</div>
-		</div>
-	</nav>
+        <div class="route-card">
+            <div class="offer">15% OFF</div>
+            <img src="warehouse/images/rish.jpg">
+            <div class="price" data-price="499">₹0</div>
+            <p>Delhi → Rishikesh</p>
+        </div>
 
+        <div class="route-card">
+            <div class="offer">SAVE ₹100</div>
+            <img src="warehouse/images/lck.jpg">
+            <div class="price" data-price="299">₹0</div>
+            <p>Delhi → Lucknow</p>
+        </div>
+    </div>
+</section>
 
-
-	<div class="hero overlay" style="background-image: url('/images/res/7.png');">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-5">
-					<style>
-						#healer {
-							font-weight: bold;
-							display: inline-block;
-							overflow: hidden;
-							opacity: 0;
-							transition: opacity 2s ease-in-out;
-						}
-					</style>
-					<h1 class="heading mb-5" data-aos="fade-up"><span id="healer"></span><br>Where Every Journey Feels
-						First Class</h1>
-					<script>
-						const names = [
-							"CtyFly",
-						  	"सिटीफ्लाई",    // Hindi
-						  	"সিটিফ্লাই",    // Bengali
-						  	"సిటీ ఫ్లై",    // Telugu
-						  	"सिटी फ्लाय",   // Marathi
-						  	"சிட்டிஃப்ளை",  // Tamil
-						  	"سٹی فلائی",    // Urdu
-						  	"સિટી ફ્લાય",   // Gujarati
-						  	"ಸಿಟಿಫ್ಲೈ",     // Kannada
-						  	"സിറ്റി ഫ്ലൈ",   // Malayalam
-						  	"ସିଟିଫ୍ଲାଇ",   // Odia
-						  	"ਸਿਟੀਫਲਾਈ",    // Punjabi
-						  	"চিটিফ্লাই",    // Assamese
-						  	"सिटी फ्लाय",   // Konkani
-						  	"सिटी फ्लाई",   // Nepali
-						  	"سِٹی فلائی"    // Kashmiri
-						];
+<section class="coming-soon">
+    <h2>Launching Soon 🚀</h2>
+    <p>
+        CTYFLY is getting ready to redefine intercity bus travel.
+        Faster bookings, better prices, and comfortable journeys — all in one place.
+    </p>
+</section>
 
 
-						const span = document.getElementById("healer");
-						let index = 0;
-
-						function fadeText() {
-							// Fade out
-							span.style.opacity = 0;
-
-							setTimeout(() => {
-								// Change text
-								index = (index + 1) % names.length;
-								span.textContent = names[index];
-
-								// Fade in
-								span.style.opacity = 1;
-							}, 2000); // matches transition duration
-						}
-
-						// Start fading every 2 seconds
-						setInterval(fadeText, 4000);
-					</script>
-
-					<div data-aos="fade-up">
-						<a href="https://www.youtube.com/watch?v=Auuf4lTvtSw"
-							class="play-button align-items-center d-flex glightbox3">
-							<span class="icon-button me-3">
-								<span class="icon-play"></span>
-							</span>
-							<span class="caption">Watch Video</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- WHY -->
+<section class="vision">
+    <h2>Why CTYFLY?</h2>
+    <p>
+        Booking bus tickets should be simple, transparent, and affordable.
+        CTYFLY is being built to remove hidden charges, confusing interfaces,
+        and unreliable schedules — so your journey starts stress-free.
+    </p>
+</section>
 
 
-	</div>
+<section class="upcoming-features">
+    <h2>What You Can Expect</h2>
+
+    <div class="feature-list">
+        <div class="feature-card">🚌 Verified AC & Sleeper Buses</div>
+        <div class="feature-card">💰 Transparent & Fair Pricing</div>
+        <div class="feature-card">📍 Popular Intercity Routes</div>
+        <div class="feature-card">📱 Mobile-First Booking Experience</div>
+        <div class="feature-card">🔐 Secure Payments</div>
+        <div class="feature-card">☎️ Dedicated Support Team</div>
+    </div>
+</section>
 
 
-	<div class="section section-2" id="About">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-5">
-					<span class="subheading" data-aos="fade-up">OUR VISION</span>
-					<h2 class="heading mb-3" data-aos="fade-up" data-aos-delay="100">Redefining travel for tomorrow</h2>
+<section class="waitlist">
+    <h2>Be the First to Ride 🚍</h2>
+    <p>
+        Join our early access list and get notified when CTYFLY goes live —
+        plus early launch offers.
+    </p>
 
-					<p data-aos="fade-up" data-aos-delay="200">At CtyFly, we’re committed to blending innovation and
-						sustainability to make every trip smarter, safer, and more convenient. Our mission isn’t just
-						about travel—it’s about shaping a future of eco-friendly, technology-driven mobility. With a
-						strong focus on adopting electric and green mobility solutions, we aim to lead the shift toward
-						cleaner intercity travel.</p>
-
-					<p data-aos="fade-up" data-aos-delay="300">Every journey with CtyFly is not just about reaching your
-						destination—it’s about traveling with purpose, comfort, and care for the planet.</p>
-
-					<p class="my-5" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">Read
-							more</a></p>
-				</div>
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-6 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-							<img src="https://i.pinimg.com/1200x/ea/b8/76/eab8765629dd0dc39d6d722cfc2f7e72.jpg"
-								alt="Image" class="img-fluid" style="border-radius: 25px;">
-						</div>
-						<div class="col-6 col-lg-6 mt-lg-5" data-aos="fade-up" data-aos-delay="500">
-							<img src="https://i.pinimg.com/1200x/4e/f1/fa/4ef1fa1b3d6378ddcacffd56f4bb697c.jpg"
-								alt="Image" class="img-fluid" style="border-radius: 25px;">
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
+    <form class="waitlist-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Notify Me</button>
+    </form>
+</section>
 
 
-	<div class="section section-3" id="Services">
-		<div class="container">
-			<div class="row align-items-center justify-content-between  mb-5">
-				<div class="col-lg-5" data-aos="fade-up">
-					<span class="subheading">What We Serve</span>
-					<h2 class="heading mb-3">Why Choose CtyFly?</h2>
-					<p>CtyFly is a fast-growing intercity bus mobility startup, connecting travelers across multiple
-						cities with a fleet of modern buses, ensuring every journey is safe, comfortable, and efficient.
-					</p>
-				</div>
-				<div class="col-lg-5 text-md-end" data-aos="fade-up" data-aos-delay="100">
-					<div id="destination-controls">
-						<span class="prev me-3" data-controls="prev">
-							<svg width="48" height="32" viewBox="0 0 48 32" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M47.5 16L3.5 16" stroke="black" stroke-width="2"></path>
-								<path d="M17.25 1.11246L2 16L17.25 30.8875" stroke="black" stroke-width="2"></path>
-							</svg>
+<footer>
+    <a style="color:white" href="mailto:connect@ctyfly.com">connect@ctyfly.com</a>
+    <br><br>
+    © 2026 CTYFLY. All rights reserved.
+    
+</footer>
 
-						</span>
-						<span class="next" data-controls="next">
-							<svg width="64" height="36" viewBox="0 0 64 36" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<line x1="-8.74228e-08" y1="18" x2="61" y2="18" stroke="black" stroke-width="2"></line>
-								<path d="M45.25 34.8875L62.5 18L45.25 1.1125" stroke="black" stroke-width="2"></path>
-							</svg>
+<a
+  href="https://wa.me/91000000000"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
-						</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-
-				<div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
-					<div class="destination-slider-wrap">
-						<div class="destination-slider">
-							<div class="destination">
-								<div class="thumb">
-									<img src="images/res/2.png" alt="Image" class="img-fluid">
-								</div>
-								<div class="mt-4">
-									<h3><a>Startup Advantage</a></h3>
-									<span class="meta">Fresh, innovative, and customer-first approach.</span>
-								</div>
-							</div>
-							<div class="destination">
-								<div class="thumb">
-									<img src="images/res/3.png" alt="Image" class="img-fluid">
-								</div>
-								<div class="mt-4">
-									<h3><a>Wide Network</a></h3>
-									<span class="meta">Reliable routes across major cities.</span>
-								</div>
-							</div>
-							<div class="destination">
-								<div class="thumb">
-									<img src="images/res/6.png" alt="Image" class="img-fluid">
-								</div>
-								<div class="mt-4">
-									<h3><a>Safety First</a></h3>
-									<span class="meta">GPS tracking, live updates, and trained marshals.</span>
-								</div>
-							</div>
-							<div class="destination">
-								<div class="thumb">
-									<img src="images/res/5.png" alt="Image" class="img-fluid">
-								</div>
-								<div class="mt-4">
-									<h3><a>Premium Comfort</a></h3>
-									<span class="meta">Modern amenities and spacious seating.</span>
-								</div>
-							</div>
-							<div class="destination">
-								<div class="thumb">
-									<img src="images/res/4.png" alt="Image" class="img-fluid">
-								</div>
-								<div class="mt-4">
-									<h3><a>Seamless Experience</a></h3>
-									<span class="meta">Quick bookings, flexible cancellations, and 24/7 support.</span>
-								</div>
-							</div>
-							<div class="destination">
-								<div class="thumb">
-									<img src="images/res/1.png" alt="Image" class="img-fluid">
-								</div>
-								<div class="mt-4">
-									<h3><a>Future-Ready</a></h3>
-									<span class="meta">Strong commitment to sustainability and electric mobility.</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section section-2">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-5">
-					<span class="subheading" data-aos="fade-up">OUR STORY</span>
-					<h2 class="heading mb-3" data-aos="fade-up" data-aos-delay="100">The CtyFly journey</h2>
-
-					<p data-aos="fade-up" data-aos-delay="200">As one of India’s most promising intercity travel
-						startups, CtyFly isn’t just about moving you from city to city—it’s about creating a travel
-						experience worth remembering.</p>
-
-					<p data-aos="fade-up" data-aos-delay="300">Our goal is simple: to offer safe, reliable, and
-						affordable travel while ensuring every ride feels like a premium experience. From booking to
-						boarding, we make travel seamless and stress-free. <br><br>Backed by a young and passionate
-						team, CtyFly focuses on customer service, safety, and innovation. Whether it’s GPS-enabled
-						buses, real-time tracking, or 24/7 support, we are here to redefine what intercity travel should
-						feel like.</p>
-
-					<p class="my-5" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">Read
-							more</a></p>
-				</div>
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-6 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-							<img src="https://i.pinimg.com/1200x/99/ee/9f/99ee9f8bd6ce40fe29a3cfd31ee1b642.jpg"
-								alt="Image" class="img-fluid" style="border-radius: 25px;">
-						</div>
-						<div class="col-6 col-lg-6 mt-lg-5" data-aos="fade-up" data-aos-delay="500">
-							<img src="https://i.pinimg.com/1200x/90/89/f4/9089f4df964d6ba8a65b2b9f6f2aa0cd.jpg"
-								alt="Image" class="img-fluid" style="border-radius: 25px;">
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="py-5 bg-primary">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
-					<h3 class="text-white m-0">🚌 Begin your adventurous journey here.</h3>
-				</div>
-				<div class="col-lg-5 text-center text-lg-end">
-					<a href="#" class="btn btn-outline-white">Get started</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="site-footer">
-		<div class="container">
-
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="widget">
-						<h3>CtyFly - <span class="text-primary">A Startup Built to Transform Your Journey</span> </h3>
-						<p>CtyFly is a fast-growing intercity bus mobility startup, connecting travelers across multiple
-							cities with a fleet of modern buses, ensuring every journey is safe, comfortable, and
-							efficient.</p>
-					</div> <!-- /.widget -->
-					<div class="widget">
-						<h3>Connect</h3>
-						<ul class="list-unstyled social">
-							<li><a href="#"><span class="icon-instagram"></span></a></li>
-							<li><a href="#"><span class="icon-twitter"></span></a></li>
-							<li><a href="#"><span class="icon-facebook"></span></a></li>
-							<li><a href="#"><span class="icon-linkedin"></span></a></li>
-							<li><a href="#"><span class="icon-pinterest"></span></a></li>
-							<li><a href="#"><span class="icon-dribbble"></span></a></li>
-						</ul>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-3 -->
-
-				<div class="col-lg-2 ml-auto">
-					<div class="widget">
-						<h3>Links</h3>
-						<ul class="list-unstyled float-left links">
-							<li><a href="#About">About us</a></li>
-							<li><a href="#Services">Services</a></li>
-							<li><a href="#">News</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="mailto:connect@CtyFly.com">Contact</a></li>
-						</ul>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-3 -->
-
-				<div class="col-lg-2">
-					<div class="widget">
-						<h3>Company</h3>
-						<ul class="list-unstyled float-left links">
-							<li><a href="#About">About us</a></li>
-							<li><a href="#Services">Services</a></li>
-							<li><a href="#">News</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="mailto:connect@CtyFly.com">Contact</a></li>
-						</ul>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-3 -->
-
-
-				<div class="col-lg-3">
-					<div class="widget">
-						<h3>Contact</h3>
-						<ul class="list-unstyled links mb-4">
-							<li><a href="tel://+918700782172">+918700782172</a></li>
-							<li><a href="mailto:connect@CtyFly.com">connect@CtyFly.com</a></li>
-						</ul>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-3 -->
-
-			</div> <!-- /.row -->
-
-			<div class="row mt-5">
-				<div class="col-12 text-center">
-					<p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright ©<script data-cfasync="false" src="js/hEtPn8TudAMq.js"></script>
-						<script>
-							document.write(new Date().getFullYear());
-						</script> All rights reserved | <i class="icon-heart text-danger" aria-hidden="true"></i> <a
-							href="https://archiastudio.com/?ref=CtyFly" target="_blank">ArchiaStudio</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</p>
-
-				</div>
-			</div>
-		</div> <!-- /.container -->
-	</div> <!-- /.site-footer -->
-
-	<!-- Preloader -->
-	<div id="overlayer"></div>
-	<div class="loader">
-		<div class="spinner-border text-primary" role="status">
-			<span class="visually-hidden">Loading...</span>
-		</div>
-	</div>
-
-
-	<script src="js/b6fYbP1eA79T.js"></script>
-	<script src="js/tQ8kLEAMdh0m.js"></script>
-	<script src="js/aX6jZ62tAUAy.js"></script>
-	<script src="js/3gu9zQTf1VPQ.js"></script>
-	<script src="js/tOQysXYgEZ1d.js"></script>
-	<script src="js/OhdCmFMYwJtw.js"></script>
-	<script src="js/FVahu7kiURu9.js"></script>
-	<script src="js/TVEedDj628zX.js"></script>
-
+<script src="warehouse/scripts/script.js"></script>
 </body>
-
 </html>
