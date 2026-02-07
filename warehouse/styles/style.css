@@ -209,13 +209,22 @@ footer {
         display: none;
         padding: 1rem;
     }
-
+    
+    .search-btn {
+        background: #79b5f200;
+        border: none;
+        border-radius: 0%;
+        width: 2.625rem;
+        height: 2.625rem;
+        cursor: pointer;
+    }
     .menu-btn {
         display: block;
     }
 
+    
+
     .search-box {
-        flex-direction: column;
         border-radius: 20px;
     }
 }
@@ -252,7 +261,11 @@ footer {
     font-family: Bold;
     text-align: center;
     padding: 10rem 5rem;
-    background: linear-gradient(135deg, #79B5F2, #4da3ff);
+    background: linear-gradient(135deg, #79b5f2b1, #4da3ff4e),
+    url("https://i.pinimg.com/1200x/1d/83/75/1d83759b91daf340fceea9b003ea27ba.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
     color: #fff;
 }
 
@@ -289,7 +302,11 @@ footer {
 
 .upcoming-features {
     font-family: Bold;
-    background: #f8f9ff;
+    background: linear-gradient(135deg, #ffffffe3, #ffffffab),
+    url("https://i.pinimg.com/1200x/59/09/8f/59098fabd1513e48f7449ae89f057a7a.jpg");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
     padding: 10rem 5rem;
     text-align: center;
 }
