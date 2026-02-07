@@ -84,7 +84,7 @@ body {
     justify-content: space-between;
     padding: 1rem 2rem;
     align-items: center;
-    background: linear-gradient(0deg, #d3e9ff,#d3e9ff);
+    background: linear-gradient(0deg, #79B5F2,#79B5F2);
 }
 
 .logo {
@@ -113,7 +113,7 @@ body {
 .hero {
     text-align: center;
     padding: 3rem 1rem;
-    background: linear-gradient(0deg, #ffffff, #d3e9ff);
+    background: linear-gradient(0deg, #ffffff, #79B5F2);
 }
 
 .hero h1 {
@@ -259,7 +259,7 @@ footer {
     font-family: Bold;
     text-align: center;
     padding: 1rem;
-    background: #000;
+    background: #79B5F2;
     color: #fff;
 }
 
@@ -426,7 +426,7 @@ footer {
     font-family: Bold;
     padding: 10rem 5rem;
     text-align: center;
-    background: linear-gradient(180deg, #ffffff, #d3e9ff);
+    background: linear-gradient(180deg, #ffffff, #79B5F2);
 }
 
 .waitlist p {
