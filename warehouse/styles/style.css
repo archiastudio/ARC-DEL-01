@@ -158,7 +158,7 @@ body {
 }
 
 .search-btn {
-    background: #79b5f200;
+    background: #79B5F2;
     border: none;
     border-radius: 50%;
     width: 2.625rem;
@@ -305,6 +305,7 @@ footer {
     }
 
     .search-btn {
+        background-color: #00000000;
         border: none;
         width: 2.625rem;
         height: 2.625rem;
