@@ -84,6 +84,7 @@ body {
     justify-content: space-between;
     padding: 1rem 2rem;
     align-items: center;
+    background: linear-gradient(0deg, #d3e9ff,#d3e9ff);
 }
 
 .logo {
@@ -112,6 +113,7 @@ body {
 .hero {
     text-align: center;
     padding: 3rem 1rem;
+    background: linear-gradient(0deg, #ffffff, #d3e9ff);
 }
 
 .hero h1 {
@@ -355,11 +357,12 @@ footer {
     font-family: Bold;
     text-align: center;
     padding: 10rem 5rem;
-    background: linear-gradient(135deg, #79b5f2b1, #4da3ff4e),
+    background: linear-gradient(0deg, #ffffff, #4da3ff1d),
         url("https://i.pinimg.com/1200x/1d/83/75/1d83759b91daf340fceea9b003ea27ba.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: none;
     color: #fff;
 }
 
@@ -396,7 +399,7 @@ footer {
 
 .upcoming-features {
     font-family: Bold;
-    background: linear-gradient(135deg, #ffffffe3, #ffffffab),
+    background: linear-gradient(180deg, #ffffff, #ffffffab),
         url("https://i.pinimg.com/1200x/59/09/8f/59098fabd1513e48f7449ae89f057a7a.jpg");
     background-size: cover;
     background-position: center;
