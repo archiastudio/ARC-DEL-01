@@ -9,6 +9,12 @@
 </head>
 <body>
 
+    <div class="preloader">
+    <div class="loader-ring">
+      <img src="warehouse/images/icon.png" alt="CTYFLY Logo" />
+    </div>
+  </div>
+
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo"><img src="warehouse/images/icon.png" width="50px"></div>
@@ -144,5 +150,20 @@
 </a>
 
 <script src="warehouse/scripts/script.js"></script>
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.querySelector(".preloader");
+
+    setTimeout(() => {
+      preloader.classList.add("hide");
+
+      // optional: remove from DOM completely
+      setTimeout(() => {
+        preloader.remove();
+      }, 700);
+    }, 2000);
+  });
+</script>
+
 </body>
 </html>

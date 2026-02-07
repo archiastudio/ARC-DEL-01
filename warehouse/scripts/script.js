@@ -57,3 +57,19 @@ function searchBuses() {
 }
 
 window.onload = animatePrices;
+
+
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.querySelector(".preloader");
+
+    setTimeout(() => {
+      preloader.classList.add("hide");
+
+      // optional: remove from DOM completely
+      setTimeout(() => {
+        preloader.remove();
+      }, 700);
+    }, 5000);
+  });
+</script>
