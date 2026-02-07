@@ -28,29 +28,51 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-    <h1>CTYFLY</h1>
+<section class="ctyfly-search">
+  <div class="search-wrapper">
+    <h1 class="brand">CTYFLY</h1>
     <p class="tagline">Connecting Cities. Moving Lives.</p>
 
-    <div class="search-box">
-        <div class="field">
-            <span>FROM</span>
-            <input id="fromCity" placeholder="Delhi">
+    <div class="search-card">
+      <!-- FROM -->
+      <div class="row">
+        <span class="label">From</span>
+        <div class="input">
+          <span class="icon">📍</span>
+          <input type="text" value="Delhi, New Delhi, Delhi"  id="fromCity"/>
+        </div>
+      </div>
+
+      <!-- TO -->
+      <div class="row">
+        <span class="label">To</span>
+        <div class="input">
+          <span class="icon">📍</span>
+          <input type="text" placeholder="To City"  id="toCity"/>
+          <button class="swap" id="swapBtn">⇅</button>
+        </div>
+      </div>
+
+      <!-- DATE -->
+      <div class="row date-row">
+        <span class="label">Date</span>
+        <div class="input">
+          <span class="icon">📅</span>
+          <input id="travelDate" type="date" value="Sat, Feb 7" />
         </div>
 
-        <div class="field">
-            <span>TO</span>
-            <input id="toCity" placeholder="Manali">
+        <div class="quick-date">
+          <button id="todayBtn" class="active">Today</button>
+          <button id="tomorrowBtn">Tomorrow</button>
         </div>
+      </div>
 
-        <div class="field">
-            <span>DEPARTURE</span>
-            <input type="date" id="travelDate">
-        </div>
-
-        <button class="search-btn" onclick="searchBuses()">🔍</button>
+      <!-- CTA -->
+      <button class="search-btn">Search Bus</button>
     </div>
+  </div>
 </section>
+
 
 <!-- ROUTES -->
 <section class="routes">

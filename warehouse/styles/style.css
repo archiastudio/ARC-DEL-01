@@ -109,66 +109,156 @@ body {
     cursor: pointer;
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: linear-gradient(0deg, #ffffff, #79B5F2);
+/* ===== CTYFLY SEARCH BLOCK ===== */
+.ctyfly-search {
+  background: linear-gradient(180deg, #79B5F2, #ffffff);
 }
 
-.hero h1 {
-    font-family: Bold;
-    font-size: 3.5rem;
+/* Reset ONLY inside block */
+.ctyfly-search * {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
 }
 
-.tagline {
-    font-family: Bold;
-    margin: 0.5rem 0 2rem;
-    font-weight: 500;
-    font-size: 1.5rem;
+/* Wrapper */
+.ctyfly-search .search-wrapper {
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
-/* SEARCH */
-.search-box {
+.ctyfly-search .brand {
     font-family: Bold;
-    background: #eee;
-    border-radius: 1.875rem;
-    /* 30px */
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    padding: 0.7rem;
-    max-width: 43.75rem;
-    /* 700px */
-    margin: auto;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ctyfly-search .tagline {
+font-family: Bold;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Card */
+.ctyfly-search .search-card {
+  background: #fff;
+  max-width: 45rem;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+/* Rows */
+.ctyfly-search .row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-bottom: 0.06rem solid #eee;
+}
+
+.ctyfly-search .row:last-child {
+  border-bottom: none;
+}
+
+/* Labels */
+.ctyfly-search .label {
+  font-size: 0.75rem;
+  color: #777;
+  text-transform: uppercase;
+}
+
+/* Input */
+.ctyfly-search .input {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.ctyfly-search .input input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  background: transparent;
+}
+
+/* Icons */
+.ctyfly-search .icon {
+  font-size: 1.2rem;
+}
+
+/* Swap button */
+.ctyfly-search .swap {
+  background: #f0e9ff;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* Swap animation */
+.swap {
+  transition: transform 0.35s ease;
+}
+
+.swap.rotate {
+  transform: rotate(180deg);
+}
+
+/* Date row */
+.ctyfly-search .date-row {
+  flex-direction: column;
+}
+
+/* Quick date */
+.ctyfly-search .quick-date {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.ctyfly-search .quick-date button {
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background: #f1f1f1;
+}
+
+.ctyfly-search .quick-date .active {
+  background: #79B5F2;
+  color: #fff;
+}
+
+/* CTA */
+.ctyfly-search .search-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  background: #79B5F2;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (min-width: 48rem) {
+  .ctyfly-search .date-row {
+    flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+  }
 }
 
-.field span {
-    font-size: 0.7rem;
-    color: #555;
-}
-
-.field input {
-    border: none;
-    background: transparent;
-    font-weight: 600;
-    outline: none;
-    width: 7.5rem;
-    /* 120px */
-}
-
-.search-btn {
-    background: #79B5F2;
-    border: none;
-    border-radius: 50%;
-    width: 2.625rem;
-    /* 42px */
-    height: 2.625rem;
-    /* 42px */
-    cursor: pointer;
-}
 
 
 /* ROUTES */
